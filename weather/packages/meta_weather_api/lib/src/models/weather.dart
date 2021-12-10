@@ -1,3 +1,6 @@
+//weather model will store the data return by the weather API
+
+
 enum WeahterStates {
   snow,
   sleet,

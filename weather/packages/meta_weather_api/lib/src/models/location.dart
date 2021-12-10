@@ -1,3 +1,6 @@
+//location model would store the data return by location API
+
+
 enum LocationType { city, region, state, province, country, continent }
 
 class Location {
