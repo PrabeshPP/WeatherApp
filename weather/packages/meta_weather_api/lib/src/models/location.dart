@@ -16,6 +16,8 @@ class Location {
       required this.lattlong});
 }
 
+
+//since the Latt_long has two string value ,below class would help to concat two different strings
 class LattLong {
   final double latitude;
   final double longitude;
