@@ -1,0 +1,14 @@
+name: meta_weather_api
+description: A Dart API client for the MetaWeather API.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.0-116.0.dev <3.0.0"
+
+dependencies:
+  http: ^0.13.4
+  json_annotation: ^4.4.0
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  json_serializable: ^6.1.1
