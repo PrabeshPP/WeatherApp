@@ -1,3 +1,5 @@
+#pubspec file for meta_weather_api
+
 name: meta_weather_api
 description: A Dart API client for the MetaWeather API.
 version: 1.0.0+1
