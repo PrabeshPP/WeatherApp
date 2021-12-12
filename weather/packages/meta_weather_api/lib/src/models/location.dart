@@ -21,5 +21,6 @@ class Latlng {
   final double latitude;
   final double longitude;
 
-  Latlng({required this.latitude,required this.longitude});
+  Latlng({required this.latitude,
+  required this.longitude});
 }

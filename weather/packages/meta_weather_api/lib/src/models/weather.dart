@@ -1,3 +1,5 @@
+/* this file would return the weather data of the entered place */
+
 enum WeatherState{
   snow,
   sleet,
