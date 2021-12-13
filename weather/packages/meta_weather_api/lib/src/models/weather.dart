@@ -1,36 +1,62 @@
 /* this file would return the weather data of the entered place */
 
-enum WeatherState{
+import 'package:json_annotation/json_annotation.dart';
+
+enum WeatherState {
+  @JsonValue('sn')
   snow,
+  @JsonValue('sl')
   sleet,
+  @JsonValue('h')
   hail,
+  @JsonValue('t')
   thunderstorm,
+  @JsonValue('hr')
   heavyRain,
+  @JsonValue('lr')
   lightRain,
+  @JsonValue('s')
   showers,
+  @JsonValue('hc')
   heavyCloud,
+  @JsonValue('lc')
   lightCloud,
+  @JsonValue('c')
   clear,
   unknown
-
 }
-enum WindDirectionCompass{
+
+extension WeatherStateX on WeatherState {
+  String? get abbr => _$WeatherStateEnumMap[this];
+}
+
+enum WindDirectionCompass {
+  @JsonValue('N')
   north,
+  @JsonValue('NE')
   northEast,
+  @JsonValue('E')
   east,
+  @JsonValue('SE')
   southEast,
+  @JsonValue('S')
   south,
+  @JsonValue('SW')
   soouthwest,
+  @JsonValue('W')
   west,
+  @JsonValue('NW')
   northWest,
   unknown
 }
 
-
+@JsonSerializable()
 class Weather {
   final String id;
   final String weatherStateName;
+  @JsonKey(unknownEnumValue: WeatherState.unknown)
   final WeatherState weatherStateAbbr;
+  @JsonKey(unknownEnumValue: WindDirectionCompass.unknown)
   final WindDirectionCompass windDirectionCompass;
   final String created;
   final String applicableDate;
@@ -44,19 +70,20 @@ class Weather {
   final double visibility;
   final int predictability;
 
-  Weather({required this.id,
-  required this.weatherStateName,
-  required this.weatherStateAbbr,
-  required this.windDirectionCompass,
-  required this.created, 
-  required this.applicableDate, 
-  required this.minTemp,
-  required this.maxTemp, 
-  required this.theTemp,
-  required this.windSpeed,
-  required this.windDirection, 
-  required this.airPressure,
-  required this.humidity,
-  required this.visibility,
-  required this.predictability});
+  Weather(
+      {required this.id,
+      required this.weatherStateName,
+      required this.weatherStateAbbr,
+      required this.windDirectionCompass,
+      required this.created,
+      required this.applicableDate,
+      required this.minTemp,
+      required this.maxTemp,
+      required this.theTemp,
+      required this.windSpeed,
+      required this.windDirection,
+      required this.airPressure,
+      required this.humidity,
+      required this.visibility,
+      required this.predictability});
 }
