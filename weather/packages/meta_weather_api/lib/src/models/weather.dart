@@ -1,6 +1,7 @@
 /* this file would return the weather data of the entered place */
 
 import 'package:json_annotation/json_annotation.dart';
+part 'weather.g.dart';
 
 enum WeatherState {
   @JsonValue('sn')
@@ -70,7 +71,7 @@ class Weather {
   final double visibility;
   final int predictability;
 
-  Weather(
+ const  Weather(
       {required this.id,
       required this.weatherStateName,
       required this.weatherStateAbbr,
@@ -86,4 +87,6 @@ class Weather {
       required this.humidity,
       required this.visibility,
       required this.predictability});
+  factory Weather.fromJson(Map<String, dynamic> json) =>
+      _$WeatherFromJson(json);
 }
