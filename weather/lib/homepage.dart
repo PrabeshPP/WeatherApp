@@ -10,7 +10,12 @@ class HomePage extends StatelessWidget {
       extendBody: true,
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        title:const  Text("Circular Notched Rectangle"),
+        actions: [
+          IconButton(onPressed: (){}, icon:Icon(Icons.settings)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.search))
+          ],
+          
+        title:const  Text("Flutter Weather"),
       ),
       floatingActionButton: FloatingActionButton(backgroundColor: Colors.deepOrangeAccent
       ,onPressed:(){},child: const Icon(Icons.add),),
@@ -29,7 +34,7 @@ floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
      color: Colors.blue,
       shape: CircularNotchedRectangle(
       ),
-        child: Container(
+        child: SizedBox(
         
           // ignore: prefer_const_literals_to_create_immutables
          child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,children: [
