@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 import 'package:meta_weather_api/meta_weather_api.dart';
 import 'package:http/http.dart' as http;
 
