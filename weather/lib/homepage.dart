@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,6 +21,42 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(backgroundColor: Colors.deepOrangeAccent
       ,onPressed:(){},child: const Icon(Icons.add),),
       body: Container(
+        child: ListWheelScrollView(
+        
+          
+          itemExtent: 200, children: [
+         Container(
+           height: 100,
+           width: MediaQuery.of(context).size.width*0.6,
+           color: Colors.deepPurpleAccent,
+         ),
+         Container(
+           width: MediaQuery.of(context).size.width*0.6,
+           height: 40,
+       
+           color: Colors.red,
+         ),
+         Container(
+           height: 40,
+          width: MediaQuery.of(context).size.width*0.6,
+           color: Colors.red,
+         ),
+         Container(
+           height: 40,
+           width: MediaQuery.of(context).size.width*0.6,
+           color: Colors.red,
+         ),
+         Container(
+           height: 40,
+        width: MediaQuery.of(context).size.width*0.6,
+           color: Colors.red,
+         ),
+         Container(
+           height: 40,
+           width: MediaQuery.of(context).size.width*0.6,
+           color: Colors.red,
+         )
+        ]),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration:const  BoxDecoration(
