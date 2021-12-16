@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:json_annotation/json_annotation.dart';
 import 'package:flutter_test/flutter_test.dart';
 
