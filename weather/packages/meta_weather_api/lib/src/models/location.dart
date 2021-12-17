@@ -17,8 +17,7 @@ enum LocationType {
   @JsonValue('Country')
   country,
   @JsonValue('Continent')
-  continent,
-  unknown
+  continent
 }
 
 @JsonSerializable()
