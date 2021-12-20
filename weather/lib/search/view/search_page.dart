@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatefulWidget {
-  const SearchPage._({Key? key}) : super(key: key);
+  SearchPage._({Key? key}) : super(key: key);
   static Route<String> route() {
-    return MaterialPageRoute(builder: (_) => const SearchPage._());
+    return MaterialPageRoute(builder: (_) => SearchPage._());
   }
 
   @override
@@ -27,10 +27,15 @@ class _SearchPageState extends State<SearchPage> {
       ),
       body: Row(
         children: [
-          TextField(
-            controller: _textController,
-            decoration:
-                const InputDecoration(labelText: 'City', hintText: 'Chicago'),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                controller: _textController,
+                decoration:
+                    const InputDecoration(labelText: 'City', hintText: 'Chicago'),
+              ),
+            ),
           ),
           IconButton(
             key: const Key("search"),

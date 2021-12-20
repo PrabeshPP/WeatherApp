@@ -14,7 +14,7 @@ class WeatherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => WeatherCubit(context.read<WeatherRepository>()),
-      child: const WeatherView(),
+      child: WeatherView(),
     );
   }
 }
@@ -64,6 +64,7 @@ class WeatherView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           final city = await Navigator.of(context).push(SearchPage.route());
+         
           await context.read<WeatherCubit>().fetchWeather(city);
         },
         child: const Icon(Icons.search),
