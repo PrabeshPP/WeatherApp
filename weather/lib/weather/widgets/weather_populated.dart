@@ -17,7 +17,7 @@ class WeatherPopulated extends StatelessWidget {
     final theme = Theme.of(context);
     return Stack(
       children: [
-        _WeatherBackground(),
+       const  _WeatherBackground(),
         RefreshIndicator(
             child: SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
