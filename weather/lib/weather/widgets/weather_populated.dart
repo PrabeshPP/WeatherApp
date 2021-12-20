@@ -8,6 +8,10 @@ class WeatherPopulated extends StatelessWidget {
   final ValueGetter<Future<void>> onRefresh;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Stack(
+      children: [
+        
+      ],
+    );
   }
 }

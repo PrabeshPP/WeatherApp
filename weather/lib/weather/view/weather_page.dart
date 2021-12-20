@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather/search/view/search_page.dart';
 import 'package:weather/settings/settings.dart';
 import 'package:weather/theme/cubit/theme_cubit.dart';
 import 'package:weather/weather/cubit/weather_cubit.dart';
@@ -61,7 +62,10 @@ class WeatherView extends StatelessWidget {
         }),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async {},
+        onPressed: () async {
+          final city = await Navigator.of(context).push(SearchPage.route());
+          await context.read<WeatherCubit>().fetchWeather(city);
+        },
         child: const Icon(Icons.search),
       ),
     );
