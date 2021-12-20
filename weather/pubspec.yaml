@@ -40,6 +40,7 @@ dependencies:
   hydrated_bloc: ^8.0.0
   json_annotation: ^4.4.0 
   path_provider: ^2.0.8
+  flutter_services_binding: ^0.1.0
   weather_repository:
     path: packages/weather_repository
   
